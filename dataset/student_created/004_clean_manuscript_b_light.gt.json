@@ -1,0 +1,92 @@
+{
+  "case_id": "004_clean_manuscript_b_light",
+  "degraded_image": "004_clean_manuscript_b_light.jpg",
+  "clean_image": "",
+  "source": "clean_manuscript_b",
+  "severity": "light",
+  "source_image": "dataset/clean/clean_manuscript_b.png",
+  "canvas_regen": {
+    "function": "heritage_vision.tools.make_dataset.degrade",
+    "loader": "heritage_vision.tools.make_dataset.load_clean_source",
+    "source": "/home/user/Web-page-/dataset/clean/clean_manuscript_b.png",
+    "gt_dir": null,
+    "max_side": 0,
+    "seed": 411,
+    "severity": "light",
+    "photo": false,
+    "perspective": false,
+    "desk": true,
+    "pad_frac": 0.035
+  },
+  "gt_damage_mask": "gt/004_clean_manuscript_b_light.damage_mask.png",
+  "gt_stain_mask": "gt/004_clean_manuscript_b_light.stain_mask.png",
+  "gt_crack_mask": "gt/004_clean_manuscript_b_light.crack_mask.png",
+  "gt_hole_mask": "gt/004_clean_manuscript_b_light.hole_mask.png",
+  "gt_text_mask": "gt/004_clean_manuscript_b_light.text_mask.png",
+  "gt_sheet_mask": "gt/004_clean_manuscript_b_light.sheet_mask.png",
+  "clean_image_canvas": null,
+  "clean_canvas": null,
+  "gt": {
+    "gt_damage_mask": "mask",
+    "gt_stain_mask": "mask",
+    "gt_crack_mask": "mask",
+    "gt_hole_mask": "mask",
+    "gt_text_mask": "mask",
+    "gt_sheet_mask": "mask",
+    "params": "mask",
+    "corners": [
+      [
+        569.0,
+        14.0
+      ],
+      [
+        12.0,
+        26.0
+      ],
+      [
+        28.0,
+        769.0
+      ],
+      [
+        585.0,
+        757.0
+      ]
+    ]
+  },
+  "params": {
+    "seed": 411,
+    "severity": "light",
+    "n_stain": 3,
+    "n_crack": 1,
+    "n_hole": 0,
+    "fade": 0.25,
+    "noise_sigma": 4.0,
+    "blur_sigma": 0.0,
+    "jpeg_quality": 78,
+    "skew_deg": 1.271,
+    "perspective": false,
+    "desk": true,
+    "pad_px": 20,
+    "photo": false
+  },
+  "corners": [
+    [
+      569.0,
+      14.0
+    ],
+    [
+      12.0,
+      26.0
+    ],
+    [
+      28.0,
+      769.0
+    ],
+    [
+      585.0,
+      757.0
+    ]
+  ],
+  "created": "2026-10-08T07:47:55",
+  "generator": "heritage_vision.tools.make_dataset"
+}

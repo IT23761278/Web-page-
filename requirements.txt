@@ -1,0 +1,25 @@
+# SE3071 Individual Project - Heritage & Culture (allocation 8)
+# heritage_vision: document/paper conservation analysis with OpenCV.
+#
+# Tested on Python 3.11.2 with the versions in brackets.  Only the first four
+# are required; everything else in the project is standard library (tkinter for
+# the GUI, unittest for the tests).
+#
+#   pip install -r requirements.txt
+#   python app.py                      # GUI  (needs tkinter, ships with the
+#                                      # python.org installers)
+#   python app.py --selftest           # headless smoke test, no GUI needed
+#
+# opencv-python vs opencv-python-headless: use `opencv-python` if you want the
+# GUI; the headless build is fine for batch/evaluation runs and has no display
+# dependency.  Neither build includes tkinter.
+
+numpy>=1.24            # [2.4.6]
+opencv-python>=4.8     # [5.0.0]  (or opencv-python-headless for servers/CI)
+pandas>=1.5            # [3.0.6]  manifest + evaluation tables
+matplotlib>=3.7        # [3.11.2] report figures; the Agg backend is used
+
+# Deliberately NOT required: the assessed core is classic image processing
+# (numpy + OpenCV only).  scikit-image / scipy / torch were considered and
+# rejected so that every operation in heritage_vision/core can be read and
+# explained without a library call the student did not write.
