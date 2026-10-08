@@ -748,6 +748,11 @@ class HeritageApp:                                          # pragma: no cover
         self.canvas.delete("all")
         if img is None:
             return
+        # the drag->image scale factor is needed even when the canvas cannot be
+        # painted (no Pillow), otherwise an OpenCV-window preview would map the
+        # ROI rectangle with the wrong factor
+        self.scale = (self.image.shape[1] / float(img.shape[1])
+                      if self.image is not None else 1.0)
         if not HAS_PIL:
             self.set_status(("Pillow is installed but its Tk bridge (ImageTk) is "
                              "unusable - " if PIL_ONLY else "Pillow is missing - ")
@@ -760,8 +765,6 @@ class HeritageApp:                                          # pragma: no cover
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         self.photo = ImageTk.PhotoImage(Image.fromarray(img))
         self.canvas.create_image(0, 0, anchor="nw", image=self.photo)
-        self.scale = (self.image.shape[1] / float(img.shape[1])
-                      if self.image is not None else 1.0)
 
     def refresh_report(self) -> None:
         txt = "\n".join(self.ctl.report_lines())
